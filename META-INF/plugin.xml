@@ -1,0 +1,69 @@
+<idea-plugin version="2">
+  <id>net.kodare.lineops</id>
+  <name>LineOps</name>
+  <version>1.0</version>
+  <vendor email="boxed@killingar.net" url="http://kodare.net">Kodare</vendor>
+
+  <description><![CDATA[
+      Operations on lines:
+      <ul>
+        <li>TESTED: Batch bookmark lines</li>
+        <li>TESTED: Invert bookmarks</li>
+        <li>TESTED: Clear bookmarks</li>
+        <li>TESTED: Copy bookmarked lines</li>
+        <li>Cut bookmarked lines</li>
+        <li>Delete bookmarked lines</li>
+      </ul>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="123.0"/>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="LineOps.BatchBookmark" class="net.kodare.lineops.BatchBookmark" text="Batch Bookmark">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+    <action id="BatchRemoveBookmark" class="net.kodare.lineops.BatchRemoveBookmark" text="Batch Unbookmark">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+    <action id="CopyBookmarks" class="net.kodare.lineops.CopyBookmarks" text="Copy Bookmarked Lines">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+    <action id="ClearBookmarks" class="net.kodare.lineops.ClearBookmarks" text="Clear Bookmarks">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+    <action id="InvertBookmarks" class="net.kodare.lineops.InvertBookmarks" text="Invert bookmarks">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+    <action id="CutBookmarks" class="net.kodare.lineops.CutBookmarks" text="Cut Bookmarks">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+    <action id="DeleteBookmarks" class="net.kodare.lineops.DeleteBookmarks" text="Delete Bookmarked Lines">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+  </actions>
+
+</idea-plugin>
