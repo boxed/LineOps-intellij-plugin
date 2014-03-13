@@ -7,10 +7,10 @@
   <description><![CDATA[
       Operations on lines:
       <ul>
-        <li>TESTED: Batch bookmark lines</li>
-        <li>TESTED: Invert bookmarks</li>
-        <li>TESTED: Clear bookmarks</li>
-        <li>TESTED: Copy bookmarked lines</li>
+        <li>Batch bookmark lines</li>
+        <li>Invert bookmarks</li>
+        <li>Clear bookmarks</li>
+        <li>Copy bookmarked lines</li>
         <li>Cut bookmarked lines</li>
         <li>Delete bookmarked lines</li>
       </ul>

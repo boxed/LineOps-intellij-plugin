@@ -53,6 +53,8 @@ public abstract class LineOpsAction extends AnAction {
     }
     Collections.sort(lines, Collections.reverseOrder());
 
+    this.clearBookmarks(e);
+
     Runnable runnable = new Runnable() {
       public void run() {
         ApplicationManager.getApplication().runWriteAction(new Runnable() {
