@@ -31,10 +31,10 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="LineOps.BatchBookmark" class="net.kodare.lineops.BatchBookmark" text="Batch Bookmark">
+    <action id="LineOps.BatchBookmark" class="net.kodare.lineops.BatchBookmark" text="Batch Bookmark…">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
-    <action id="BatchRemoveBookmark" class="net.kodare.lineops.BatchRemoveBookmark" text="Batch Unbookmark">
+    <action id="BatchRemoveBookmark" class="net.kodare.lineops.BatchRemoveBookmark" text="Batch Unbookmark…">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
     <action id="CopyBookmarks" class="net.kodare.lineops.CopyBookmarks" text="Copy Bookmarked Lines">
@@ -43,7 +43,7 @@
     <action id="ClearBookmarks" class="net.kodare.lineops.ClearBookmarks" text="Clear Bookmarks">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
-    <action id="InvertBookmarks" class="net.kodare.lineops.InvertBookmarks" text="Invert bookmarks">
+    <action id="InvertBookmarks" class="net.kodare.lineops.InvertBookmarks" text="Invert Bookmarks">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
     <action id="CutBookmarks" class="net.kodare.lineops.CutBookmarks" text="Cut Bookmarks">
