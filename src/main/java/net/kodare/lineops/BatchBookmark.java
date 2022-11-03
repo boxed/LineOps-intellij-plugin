@@ -1,15 +1,29 @@
 package net.kodare.lineops;
 
-import com.intellij.ide.bookmarks.BookmarkManager;
-import com.intellij.openapi.editor.Editor;
+import com.intellij.ide.bookmark.BookmarkType;
+import com.intellij.ide.bookmark.BookmarksManager;
+import com.intellij.ide.bookmark.FileBookmark;
+import com.intellij.ide.bookmark.providers.LineBookmarkProvider;
+import com.intellij.openapi.vfs.VirtualFile;
 
 import java.util.ArrayList;
 
 
 public class BatchBookmark extends SearchAction {
-  void doAction(BookmarkManager bookmarkManager, Editor editor, ArrayList<Integer> lineNumbers) {
+
+  @Override
+  void doAction(BookmarksManager bookmarksManager, LineBookmarkProvider lineBookmarkProvider, VirtualFile virtualFile, ArrayList<Integer> lineNumbers) {
     for (Integer lineNumber : lineNumbers) {
-      bookmarkManager.addEditorBookmark(editor, lineNumber);
+      final FileBookmark bookmark = lineBookmarkProvider.createBookmark(virtualFile, lineNumber);
+      if (bookmark == null) {
+        continue;
+      }
+      bookmarksManager.add(bookmark, BookmarkType.DEFAULT);
     }
+  }
+
+  @Override
+  String getTitle() {
+    return "Batch Bookmark";
   }
 }

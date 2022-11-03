@@ -1,5 +1,3 @@
-import org.jetbrains.changelog.markdownToHTML
-
 fun properties(key: String) = project.findProperty(key).toString()
 
 plugins {
@@ -21,15 +19,15 @@ repositories {
     mavenCentral()
 }
 
-// Set the JVM language level used to compile sources and generate files - Java 11 is required since 2020.3
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
 // Configure Gradle IntelliJ Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
+    updateSinceUntilBuild.set(false)
     pluginName.set(properties("pluginName"))
     version.set(properties("platformVersion"))
     type.set(properties("platformType"))
