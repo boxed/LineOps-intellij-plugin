@@ -1,7 +1,6 @@
-<idea-plugin version="2">
+<idea-plugin>
   <id>net.kodare.lineops</id>
   <name>LineOps</name>
-  <version>1.0</version>
   <vendor email="boxed@killingar.net" url="http://kodare.net">Kodare</vendor>
 
   <description><![CDATA[
@@ -16,17 +15,6 @@
       </ul>
     ]]></description>
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
-
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="123.0"/>
-
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
   <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">
@@ -43,10 +31,10 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="LineOps.BatchBookmark" class="net.kodare.lineops.BatchBookmark" text="Batch Bookmark">
+    <action id="LineOps.BatchBookmark" class="net.kodare.lineops.BatchBookmark" text="Batch Bookmark…">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
-    <action id="BatchRemoveBookmark" class="net.kodare.lineops.BatchRemoveBookmark" text="Batch Unbookmark">
+    <action id="BatchRemoveBookmark" class="net.kodare.lineops.BatchRemoveBookmark" text="Batch Unbookmark…">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
     <action id="CopyBookmarks" class="net.kodare.lineops.CopyBookmarks" text="Copy Bookmarked Lines">
@@ -55,7 +43,7 @@
     <action id="ClearBookmarks" class="net.kodare.lineops.ClearBookmarks" text="Clear Bookmarks">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
-    <action id="InvertBookmarks" class="net.kodare.lineops.InvertBookmarks" text="Invert bookmarks">
+    <action id="InvertBookmarks" class="net.kodare.lineops.InvertBookmarks" text="Invert Bookmarks">
       <add-to-group group-id="EditorPopupMenu"/>
     </action>
     <action id="CutBookmarks" class="net.kodare.lineops.CutBookmarks" text="Cut Bookmarks">
